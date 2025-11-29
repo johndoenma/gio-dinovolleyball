@@ -52,7 +52,7 @@ TABLE OF CONTENTS
 
     /* DEFINE BASE COLORS */
     --color-white: #fff;
-    --color-white-80: rgb(255 255 255 / .8);
+    --color-white-80:rgb(255 255 255/ .8);
     --color-black: #000;
     --color-black-80: rgb(0 0 0 / .8);
 
@@ -113,7 +113,7 @@ TABLE OF CONTENTS
     --container-width: 1100px;
 
     /* GLOBAL FONTS */
-    --font-body: "Albert Sans", system-ui, Helvetica, arial, sans-serif;
+    --font-body: "Albert Sans",system-ui, Helvetica, arial, sans-serif;
     --font-headings: "Slackey", Georgia, Times, "Times New Roman", serif;
 
 }
@@ -122,6 +122,7 @@ TABLE OF CONTENTS
 body {
     background-color: var(--color-body-background);
     color: var(--color-body-text);
+    background-image: url('../img/sand.jpg');
 }
 
 /* HEADINGS */
@@ -229,6 +230,70 @@ html {
     padding-inline: var(--unit-s);
 }
 
+/* SCHEDULE */
+.schedule-item {
+    background: #f8f6e3; /* pale bar */
+    border-radius: 25px;
+    margin: 24px 0;
+    padding: 16px 32px;
+    font-size: 1.15em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 32px;  
+    margin: 24px 0;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;  
+}
+
+.day-title {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    color: #233e64;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0;  
+    letter-spacing: 2px;
+}
+
+
+.time {
+    font-weight: bold;
+    color: #233e64;
+    width: 120px;  
+    /*font-size: 1.12em;*/
+    letter-spacing: 2px;
+}
+
+.details {
+    color: #233e64;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 14px;  
+}
+
+.time {
+    font-weight: bold;
+    color: #233e64;
+    width: 128px;
+    letter-spacing: 2px;
+}
+
+.details {
+    color: #233e64;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 
 /* GRID SYSTEM (12 column) */
 
@@ -329,7 +394,6 @@ html {
     display: flex;
     align-items: center;
     gap: var(--unit-s);
-    max-width: 150px;
 }
 
 .site-header .logo svg {
@@ -485,14 +549,11 @@ section {
     padding-block: var(--unit-3xl);
     padding-inline: var(--unit-s);
     color: var(--color-white);
+    background-image: url(../img/brownwall.jpg);
 
     h1, h2, h3 {
         color: var(--color-white);
     }
-}
-
-.hero img {
-    max-width: 600px;    
 }
 
 .hero:has(.container) {
@@ -505,7 +566,37 @@ section {
     background-color: var(--color-sitefooter-background);
     padding-block: var(--unit-2xl);
     padding-inline: var(--unit-s);
+    background-image: url(../img/brownwall.jpg);
+    text-decoration-color: var(--color-white);
+
 }
+
+.site-footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; 
+}
+
+.site-footer .one-third {
+  flex: 0 1 120px; /* Adjust minimum width for each logo container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* REMOVE FOOTER PADDING IF IT HAS A CONTAINER */
 .site-footer:has(.container) {
@@ -718,6 +809,7 @@ body > * {
 
 
 
+
 /*SCROLL-TRIGGERED ANIMATION*/
 
 * FIX SCROLL BAR ON ALL SCROLL ANIMATION SECTIONS */
@@ -766,3 +858,15 @@ section:has(.observe-me) {
 .observe-me.delay-4 { transition-delay: 0.5s; }
 .observe-me.delay-5 { transition-delay: 0.7s; }
 .observe-me.delay-6 { transition-delay: 0.9s; }
+
+/*
+.site-main{
+    background-color: red;
+}
+/*features section styling*
+#features{
+    mask-image: url(../img/sandmask.png);
+  mask-repeat: no-repeat;
+  background-color: yellow;
+}
+  */
